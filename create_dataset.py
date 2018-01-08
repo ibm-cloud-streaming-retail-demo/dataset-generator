@@ -44,6 +44,7 @@ def create_csv():
     df_UK_Day = df.copy()
     df_US_Day = df.copy()
 
+    # add a suffix to the invoice number so that UK and US records have a unique id
     df_UK_Day['InvoiceNo'] = (df_UK_Day['InvoiceNo'].astype('str') + '1').astype(int)
     df_US_Day['InvoiceNo'] = (df_US_Day['InvoiceNo'].astype('str') + '2').astype(int)
 
