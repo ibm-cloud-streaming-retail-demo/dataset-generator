@@ -21,10 +21,10 @@ git clone https://github.com/ibm-cloud-streaming-retail-demo/dataset-generator
 cd dataset-generator
 
 # setup the python libary dependency
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 
 # download and prepare the dataset
-$ python create_dataset.py
+$ python3 create_dataset.py
 ```
 
 Note that the processing is performed entirely in memory.
