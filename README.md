@@ -23,9 +23,7 @@ Note that the processing is performed entirely in memory.
 
 # Original dataset
 
-## Example records
-
-Some example records:
+Some example records from the origional dataset:
 
 InvoiceNo | StockCode | Description | Quantity | InvoiceDate | UnitPrice | CustomerID | Country
 -- | -- | -- | -- | -- | -- | -- | --
