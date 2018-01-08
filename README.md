@@ -30,7 +30,7 @@ Some example records:
 InvoiceNo | StockCode | Description | Quantity | InvoiceDate | UnitPrice | CustomerID | Country
 -- | -- | -- | -- | -- | -- | -- | --
 536365	| 85123A	| WHITE HANGING HEART T-LIGHT HOLDER	|  6	| 01/12/2010 08:26	| 2.55	| 17850	|  United Kingdom
-536365	| 71053	| WHITE METAL LANTERN	6	01/12/2010 08:26	| 3.39	| 17850	| United Kingdom
+536365	| 71053	| WHITE METAL LANTERN	| 6	| 01/12/2010 08:26	| 3.39	| 17850	| United Kingdom
 536365	| 84406B	| CREAM CUPID HEARTS COAT HANGER	| 8	| 01/12/2010 08:26	| 2.75	| 17850	| United Kingdom
 
 The full dataset is available here: http://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx
