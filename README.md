@@ -28,6 +28,11 @@ The dataset can be created with:
 git clone https://github.com/ibm-cloud-streaming-retail-demo/dataset-generator
 cd dataset-generator
 
+# setup a virtualenv (optional but recommended)
+cd kafka-producer-for-simulated-data
+virtualenv venv
+source venv/bin/activate
+
 # setup the python libary dependency
 $ pip3 install -r requirements.txt
 
