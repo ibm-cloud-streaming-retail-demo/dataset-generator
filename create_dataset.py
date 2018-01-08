@@ -33,21 +33,24 @@ def create_csv():
     # remove negative quantities - this also removes non-numeric InvoiceNo's
     df = df.ix[df['Quantity'] > 0] 
 
-    # Add a line number for each item in an invoice
+    # Add a line item number for each item in an invoice
     df['LineNo'] = df.groupby(['InvoiceNo']).cumcount()+1
 
     # the dataset starts at approx 6am and finishes at approx 10pm
-    # we want to data to span 24 hours
+    # we want to data to span 24 hours so that it is interesting for UK and American
+    # demos.  We may also want to do a similar thing for Asia Pacific, perhaps 
+    # we should have three regions and an 8 hour difference between each region?
 
-    df_AM = df.copy()
-    df_PM = df.copy()
+    df_UK_Day = df.copy()
+    df_US_Day = df.copy()
 
-    df_AM['InvoiceNo'] = (df_AM['InvoiceNo'].astype('str') + '1').astype(int)
-    df_PM['InvoiceNo'] = (df_PM['InvoiceNo'].astype('str') + '2').astype(int)
+    df_UK_Day['InvoiceNo'] = (df_UK_Day['InvoiceNo'].astype('str') + '1').astype(int)
+    df_US_Day['InvoiceNo'] = (df_US_Day['InvoiceNo'].astype('str') + '2').astype(int)
 
-    df_PM['InvoiceDate'] = df_PM['InvoiceDate'] + datetime.timedelta(hours=12)
+    # Let's approximate the overall time difference between US and UK as 12 hours
+    df_US_Day['InvoiceDate'] = df_US_Day['InvoiceDate'] + datetime.timedelta(hours=12)
 
-    df = pd.concat([df_AM, df_PM])
+    df = pd.concat([df_UK_Day, df_US_Day])
 
     # Sort dataframe
     df['InvoiceTime'] = pd.DatetimeIndex(df['InvoiceDate']).time
