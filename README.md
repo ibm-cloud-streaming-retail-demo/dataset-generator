@@ -16,14 +16,15 @@ The original dataset transactions span one year (1st Dec 2010 to 9th Dec 2011). 
 The dataset can be created with:
 
 ```
-# setup python libaries
-$ pip install -r requirements.txt
-```
-and then 
+# First grab this project
+git clone https://github.com/ibm-cloud-streaming-retail-demo/dataset-generator
+cd dataset-generator
 
-```
+# setup the python libary dependency
+$ pip install -r requirements.txt
+
 # download and prepare the dataset
-$ python prepare.py
+$ python create_dataset.py
 ```
 
 Note that the processing is performed entirely in memory.
