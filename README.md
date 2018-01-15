@@ -23,13 +23,18 @@ The original dataset transactions span one year (1st Dec 2010 to 9th Dec 2011). 
 
 The dataset can be created with:
 
+- local python
+- dockerised python
+
+### Local Python
+
 ```
 # First grab this project
 git clone https://github.com/ibm-cloud-streaming-retail-demo/dataset-generator
 cd dataset-generator
 
 # setup a virtualenv (optional but recommended)
-cd kafka-producer-for-simulated-data
+cd dataset-generator
 virtualenv venv
 source venv/bin/activate
 
@@ -38,6 +43,12 @@ $ pip3 install -r requirements.txt
 
 # download and prepare the dataset
 $ python3 create_dataset.py
+```
+
+### Dockerised Python
+
+```
+docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 bash -c "pip3 install -r requirements.txt && python3 create_dataset.py"
 ```
 
 Note that the processing is performed entirely in memory.
