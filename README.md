@@ -26,6 +26,8 @@ The dataset can be created with:
 - local python
 - dockerised python
 
+Note that the processing is performed entirely in memory.
+
 ### Local Python
 
 ```
@@ -51,7 +53,7 @@ $ python3 create_dataset.py
 docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 bash -c "pip3 install -r requirements.txt && python3 create_dataset.py"
 ```
 
-Note that the processing is performed entirely in memory.
+
 
 # Original dataset
 
