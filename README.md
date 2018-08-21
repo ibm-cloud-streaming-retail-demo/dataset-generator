@@ -51,7 +51,7 @@ $ python3 create_dataset.py
 ### Dockerised Python
 
 ```
-docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 bash -c "pip3 install -r requirements.txt && python3 create_dataset.py"
+docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp amancevice/pandas:0.20.2-python3 bash -c "pip3 install -r requirements.txt && python3 create_dataset.py"
 ```
 
 
