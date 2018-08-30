@@ -70,8 +70,8 @@ The full dataset is available here: http://archive.ics.uci.edu/ml/machine-learni
 
 See: 
 
-- [website](./research_paper/website.pdf)
-- [paper](./research_paper/paper.pdf)
+- [research paper](./research_paper/paper.pdf) (see website for research paper license)
+- [website](./research_paper/website.pdf) 
 
 ## Credits
 
